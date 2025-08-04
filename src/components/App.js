@@ -1,65 +1,69 @@
+import React, { useState } from "react";
+import Menu from "./Menu";
 import "./styles.css";
-import Menu from "./menu.jsx";
-import { useState } from "react";
+
+// Menu items
+const menuItems = [
+  {
+    name: "Pancakes",
+    category: "Breakfast",
+    image: "https://via.placeholder.com/150",
+    price: "$5.99"
+  },
+  {
+    name: "Burger",
+    category: "Lunch",
+    image: "https://via.placeholder.com/150",
+    price: "$8.99"
+  },
+  {
+    name: "Milkshake",
+    category: "Shakes",
+    image: "https://via.placeholder.com/150",
+    price: "$3.99"
+  },
+  {
+    name: "Omelette",
+    category: "Breakfast",
+    image: "https://via.placeholder.com/150",
+    price: "$4.99"
+  },
+  {
+    name: "Steak",
+    category: "Lunch",
+    image: "https://via.placeholder.com/150",
+    price: "$12.99"
+  },
+  {
+    name: "Strawberry Shake",
+    category: "Shakes",
+    image: "https://via.placeholder.com/150",
+    price: "$4.49"
+  }
+];
 
 export default function App() {
-  const menuItems = [
-    {
-      name: "Pancakes",
-      category: "Breakfast",
-      price: "$5.99",
-      image: "https://via.placeholder.com/150",
-    },
-    {
-      name: "Burger",
-      category: "Lunch",
-      price: "$9.99",
-      image: "https://via.placeholder.com/150",
-    },
-    {
-      name: "Oreo Milkshake",
-      category: "Shakes",
-      price: "$4.50",
-      image: "https://via.placeholder.com/150",
-    },
-    {
-      name: "Dosa",
-      category: "Breakfast",
-      price: "$3.50",
-      image: "https://via.placeholder.com/150",
-    },
-    {
-      name: "Chicken Biryani",
-      category: "Lunch",
-      price: "$10.00",
-      image: "https://via.placeholder.com/150",
-    },
-    {
-      name: "Chocolate Shake",
-      category: "Shakes",
-      price: "$4.00",
-      image: "https://via.placeholder.com/150",
-    },
-  ];
-
-  const [category, setCategory] = useState("All");
-
-  const showList = (selected) => {
-    setCategory(selected);
-  };
+  const [selectedCategory, setSelectedCategory] = useState("All");
 
   return (
-    <>
-      <div className="Buttons">
-        <button onClick={() => showList("All")}>All</button>
-        <button onClick={() => showList("Breakfast")}>Breakfast</button>
-        <button onClick={() => showList("Lunch")}>Lunch</button>
-        <button onClick={() => showList("Shakes")}>Shakes</button>
+    <div id="main">
+      <h1>Menu</h1>
+      <div className="btn-container">
+        <button id="filter-btn-1" onClick={() => setSelectedCategory("Breakfast")}>
+          Breakfast
+        </button>
+        <button id="filter-btn-2" onClick={() => setSelectedCategory("Lunch")}>
+          Lunch
+        </button>
+        <button id="filter-btn-3" onClick={() => setSelectedCategory("Shakes")}>
+          Shakes
+        </button>
+        <button id="filter-btn-all" onClick={() => setSelectedCategory("All")}>
+          All
+        </button>
       </div>
-
-      <div>
-        <Menu items={menuItems} selectedCategory={category} />
-      </div>
-    </>
+      <Menu items={menuItems} selectedCategory={selectedCategory} />
+    </div>
   );
 }
+
