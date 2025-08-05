@@ -13,7 +13,7 @@ const Menu = ({ items, selectedCategory }) => {
           data-test-id={`menu-item-${item.category.toLowerCase()}`}
         >
           <h3>{item.name}</h3>
-          <img src={item.image} alt={item.name} />
+          <img className=" menu-item img" src={item.image} alt={item.name} />
           <p>{item.price}</p>
         </div>
       ))}
