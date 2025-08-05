@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Menu from "./menu.jsx";
-import "./styles.css";
+import "./style.css";
 
 // Menu items
 const menuItems = [
