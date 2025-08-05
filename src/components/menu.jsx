@@ -1,3 +1,4 @@
+import react from "react";
 const Menu = ({ items, selectedCategory }) => {
   const filteredItems =
     selectedCategory === "All"
