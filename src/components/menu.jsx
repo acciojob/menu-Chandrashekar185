@@ -1,4 +1,4 @@
-import react from "react";
+import React from "react";
 const Menu = ({ items, selectedCategory }) => {
   const filteredItems =
     selectedCategory === "All"
@@ -14,7 +14,7 @@ const Menu = ({ items, selectedCategory }) => {
           data-test-id={`menu-item-${item.category.toLowerCase()}`}
         >
           <h3>{item.title}</h3>
-          <img className=" menu-item img" src={item.img} alt={item.title} />
+          <img className="menu-item-img" src={item.img} alt={item.title} />
           <p>{item.price}</p>
          <p>{item.desc}</p>
         </div>
