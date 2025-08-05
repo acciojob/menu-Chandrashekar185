@@ -6,15 +6,16 @@ const Menu = ({ items, selectedCategory }) => {
 
   return (
     <div className="menu">
-      {filteredItems.map((item, index) => (
+      {filteredItems.map((item) => (
         <div
-          key={index}
+          key={item.id}
           className="menu-item"
           data-test-id={`menu-item-${item.category.toLowerCase()}`}
         >
           <h3>{item.name}</h3>
           <img className=" menu-item img" src={item.image} alt={item.name} />
           <p>{item.price}</p>
+         <p>{item.desc}</p>
         </div>
       ))}
     </div>
