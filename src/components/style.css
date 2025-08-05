@@ -1,0 +1,61 @@
+/* Main container */
+#main {
+  font-family: sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Buttons container */
+.btn-container {
+  margin-bottom: 20px;
+}
+
+/* Buttons */
+.btn-container button {
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect */
+.btn-container button:hover {
+  background-color: #0056b3;
+}
+
+/* Menu item grid */
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;                                                
+}
+
+/* Each menu item card */
+.menu-item {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 200px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+/* Menu item image */
+.menu-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+/* Price styling */
+.menu-item p {
+  font-weight: bold;
+  margin-top: 10px;
+  color: #333;
+}
